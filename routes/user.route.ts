@@ -1,9 +1,10 @@
 import express, { type Request, type Response } from 'express';
+import { users } from '../data/user.data';
 
 const router = express.Router();
 
 router.get('/', (req, res) => {
-	res.json({ message: 'Get users' });
+	res.json(users);
 });
 
 router.post('/', (req, res) => {
